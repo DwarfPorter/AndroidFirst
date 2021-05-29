@@ -11,7 +11,7 @@
         android:id="@+id/edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number" />
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/edit2"
@@ -27,5 +27,40 @@
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Галочка"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:breakStrategy="high_quality"
+        android:button="@drawable/ic_launcher_foreground"
+        android:buttonTint="@color/purple_200"
+        android:rotationX="50"
+        android:text="Oleg"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200" />
+
+    <Button
+        android:id="@+id/btnActTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to activity two"
+        android:backgroundTint="@color/black"/>
 
 </LinearLayout>
