@@ -25,28 +25,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnActTwo = (Button) findViewById(R.id.btnActTwo);
+        btnActTwo = findViewById(R.id.btnActTwo);
         btnActTwo.setOnClickListener(this);
 
         EditText editText1 = findViewById(R.id.edit1);
         EditText editText2 = findViewById(R.id.edit2);
         Button button = findViewById(R.id.compare);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView result = findViewById(R.id.result);
+        button.setOnClickListener(v -> {
+            TextView result = findViewById(R.id.result);
 
-                try {
-                    arg1 = Integer.valueOf(editText1.getText().toString());
-                    arg2 = Integer.valueOf(editText2.getText().toString());
-                    if (arg1.equals(arg2)) {
-                        result.setText("Ravno");
-                    } else {
-                        result.setText("Ne Ravno");
-                    }
-                } catch (NumberFormatException e) {
-                    result.setText("Введите число!");
+            try {
+                arg1 = Integer.valueOf(editText1.getText().toString());
+                arg2 = Integer.valueOf(editText2.getText().toString());
+                if (arg1.equals(arg2)) {
+                    result.setText("Ravno");
+                } else {
+                    result.setText("Ne Ravno");
                 }
+            } catch (NumberFormatException e) {
+                result.setText("Введите число!");
             }
         });
     }
