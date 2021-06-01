@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".ActivityTwo">
 
+    <ImageView
+        android:id="@+id/imageView_message_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back"/>
+
     <Button
         android:id="@+id/button_1"
         android:layout_width="wrap_content"
