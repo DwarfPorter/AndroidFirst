@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Calc</string>
     <string name="button">Button</string>
-    <string name="go_to_activity_two">Calc</string>
-    <string name="title_activity_two">ActivityTwo</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -27,5 +25,4 @@
     <string name="minus">-</string>
     <string name="equall">=</string>
     <string name="plus">+</string>
-    <string name="go_to_calc">Go to Calc</string>
 </resources>
