@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView workingsTV;
-    TextView resultsTV;
-    int buffer;
-    char op;
+    private TextView workingsTextView;
+    private TextView resultsTextView;
+    private int buffer;
+    private char op;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,45 +23,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initTextViews() {
-        workingsTV = (TextView) findViewById(R.id.workingsTextView);
-        resultsTV = (TextView) findViewById(R.id.resultTextView);
+        workingsTextView = (TextView) findViewById(R.id.workingsTextView);
+        resultsTextView = (TextView) findViewById(R.id.resultTextView);
     }
 
     public void opOnClick(View view) {
-        buffer = Integer.parseInt(workingsTV.getText().toString());
+        buffer = Integer.parseInt(workingsTextView.getText().toString());
         Button b = (Button) view;
         op = b.getText().charAt(0);
-        resultsTV.setText(workingsTV.getText().toString() + b.getText().toString());
-        workingsTV.setText("");
+        resultsTextView.setText(workingsTextView.getText().toString() + b.getText().toString());
+        workingsTextView.setText("");
     }
 
     public void numOnClick(View view) {
         Button b = (Button) view;
-        workingsTV.setText(workingsTV.getText().toString() + b.getText().toString());
+        workingsTextView.setText(workingsTextView.getText().toString() + b.getText().toString());
     }
 
     public void clearOnClick(View view) {
-        workingsTV.setText("");
-        resultsTV.setText("");
+        workingsTextView.setText("");
+        resultsTextView.setText("");
     }
 
     public void equalsOnClick(View view) {
         switch (op) {
             case '+':
-                buffer += Integer.parseInt((String) workingsTV.getText());
+                buffer += Integer.parseInt((String) workingsTextView.getText());
                 break;
             case '-':
-                buffer -= Integer.parseInt((String) workingsTV.getText());
+                buffer -= Integer.parseInt((String) workingsTextView.getText());
                 break;
             case '*':
-                buffer *= Integer.parseInt((String) workingsTV.getText());
+                buffer *= Integer.parseInt((String) workingsTextView.getText());
                 break;
             case '/':
-                buffer /= Integer.parseInt((String) workingsTV.getText());
+                buffer /= Integer.parseInt((String) workingsTextView.getText());
                 break;
         }
-        resultsTV.setText(String.valueOf(buffer));
-        workingsTV.setText("");
+        resultsTextView.setText(String.valueOf(buffer));
+        workingsTextView.setText("");
     }
 }
 
