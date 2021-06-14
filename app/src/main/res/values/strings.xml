@@ -20,4 +20,5 @@
     <string name="percent">%</string>
     <string name="brackets">()</string>
     <string name="degree">^</string>
+    <string name="action_settings">Theme</string>
 </resources>
